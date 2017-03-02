@@ -14,9 +14,7 @@ public class Node {
 		return value;
 	}
 
-	public void setValue(int value) {
-		this.value = value;
-	}
+	// usunieto niewykorzystywane setValue()
 
 	public Node getNext() {
 		return next;

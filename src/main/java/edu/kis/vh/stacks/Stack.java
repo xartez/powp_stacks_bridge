@@ -16,11 +16,9 @@ public class Stack {
 	public int getTotal() {
 		return total;
 	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
+	
+	//usunieto nieuzywane setTotal
+	
 	public void push(int i) {
 		if (!isFull())
 			items[++total] = i;
