@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.demo;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
-
+//TODO: needs to test implementation of StackLIst insted of Stack Array
 // Usunięte wcięcie w linii 13, 19-27, dodana spacja przed klamra w linii 14, usuniety enter w linii 30 
 class StacksDemo {
 
