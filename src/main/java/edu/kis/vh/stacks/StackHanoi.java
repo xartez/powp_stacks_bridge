@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackHanoi extends Stack {
+public class StackHanoi extends Stack implements IStack {
 
 	private int totalRejected = 0;
 

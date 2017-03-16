@@ -25,7 +25,7 @@ package edu.kis.vh.stacks;
  * Generalnie dażymy do tego by kod był na tyle czytelny aby nie było konieczności pisać takiej zbednej dokumentacji.
  * 
  */
-public class StackArray {
+public class StackArray implements IStack {
 
 	private static final int FULL_STACK_VALUE = 11;
 

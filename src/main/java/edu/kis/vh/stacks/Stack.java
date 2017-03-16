@@ -31,40 +31,38 @@ public class Stack {
 
 
 	//private stackList stackList = new stackList();
-	private StackList stackList = new StackList();
+	private IStack iStack = new StackList();
 	public Stack() {
-		this.stackList = new StackList();
+		this.iStack = new StackList();
 	}
 
 	public Stack(StackList stackList) {
 		super();
-		this.stackList = stackList;
+		this.iStack = stackList;
 	}
 
-
-/*	public int getTotal() {
-		return stackList.getTotal();
-	}*/
-
 	public void push(int i) {
-		stackList.pushElement(i);
+		iStack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.empty();
+		return iStack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.full();
+		return iStack.isFull();
 	}
 
 	public int top() {
-		return stackList.peek();
+		return iStack.top();
 	}
 
 	public int pop() {
-		return stackList.pop();
+		return iStack.pop();
 	}
+
+
+
 	
 
 
