@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks.list;
 
 public class StackList {
-
+// generate Delegate, generate Constructor 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
 	private int i;

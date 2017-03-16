@@ -11,7 +11,7 @@ class StacksDemo {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		testStacks(factory);
 	}
-
+// F3 użyte na wywołaniu funkcji przenosi do ciała funkcji 
 	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
