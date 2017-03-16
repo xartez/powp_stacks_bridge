@@ -25,48 +25,48 @@ package edu.kis.vh.stacks;
  * Generalnie dażymy do tego by kod był na tyle czytelny aby nie było konieczności pisać takiej zbednej dokumentacji.
  * 
  */
-public class Stack {
+public class StackArray {
 
+	private static final int FULL_STACK_VALUE = 11;
 
-	private StackArray stackArray = new StackArray();
+	private static final int STACK_SIZE_VALUE = 12;
+
+	private static final int EMPTY_STACK_VALUE = -1;
+
+	private int[] items = new int[STACK_SIZE_VALUE];
+
+	private int total = EMPTY_STACK_VALUE;
 	
-	public Stack() {
-		this.stackArray = new StackArray();
-	}
-
-	public Stack(StackArray stackArray) {
-		super();
-		this.stackArray = stackArray;
-	}
-
-
-
 
 	public int getTotal() {
-		return stackArray.getTotal();
+		return total;
 	}
-
+	
+	//usunieto nieuzywane setTotal
+	
 	public void push(int i) {
-		stackArray.push(i);
+		if (!isFull())
+			items[++total] = i;
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return total == EMPTY_STACK_VALUE;
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return total == FULL_STACK_VALUE;
 	}
 
 	public int top() {
-		return stackArray.top();
+		if (isEmpty())
+			return EMPTY_STACK_VALUE;
+		return items[total];
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		if (isEmpty())
+			return EMPTY_STACK_VALUE;
+		return items[total--];
 	}
-	
-
-
 
 }
