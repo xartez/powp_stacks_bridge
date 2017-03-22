@@ -13,5 +13,5 @@ public interface IStacksFactory {
 	public StackFIFO getFIFOStack();
 
 	public StackHanoi getHanoiStack();
-
+// Zasade izolacji lamia fabryki - zwracane abstrakcje stosow sa uzaleznione od implementacji (StackArray lub StackList).
 }
