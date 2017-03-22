@@ -27,6 +27,7 @@ import edu.kis.vh.stacks.implementation.StackList;
  * Generalnie dażymy do tego by kod był na tyle czytelny aby nie było konieczności pisać takiej zbednej dokumentacji.
  * 
  */
+
 public class Stack {
 	// 3.1.7 implementacja metod zostala zastapiona delegacja do interfejsu 
 
@@ -61,7 +62,7 @@ public class Stack {
 		return iStack.pop();
 	}
 
-
+	// F3 otwiera deklaracje metod w interfejsie, Open Hierarchy (CTRL+T) wyswietla interfejsy i klasy implementujace metody, CTRL+Kursor pozwala otworzyc miejsce deklaracji lub implementacji metody 
 
 	
 
