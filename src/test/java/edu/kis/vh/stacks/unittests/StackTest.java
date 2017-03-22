@@ -7,6 +7,7 @@ import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFIFO;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 
 // kombinacja alt + <- i alt + -> kieruje cie kolejna wstecz lub do przodu ostatnio odwiedzonych linii w kazdym pliku  
 public class StackTest {
@@ -35,14 +36,15 @@ public class StackTest {
 
 	@Test
 	public void testIsFull() {
-		Stack stackObj = new Stack();
+		ArrayStacksFactory arrayStacksFactory = new ArrayStacksFactory();
+		Stack stackObj = arrayStacksFactory.getStandardStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
 			stackObj.push(888);
 		}
-
+		// test sprawdzi dzialanie metody isFull() dla stosu implementujacego StackArray
 		boolean result = stackObj.isFull();
 		Assert.assertEquals(true, result);
 	}
@@ -107,6 +109,6 @@ public class StackTest {
 		int result = stackObj.top();
 		Assert.assertEquals(testValue, result);
 	}
-
+// zmiana stalej wskazujacej, ze stos jest pusty (podpunkt 11) spowodowala zakonczenie niektorych testow niepowodzeniem 
 
 }
