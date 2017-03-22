@@ -4,6 +4,9 @@ import edu.kis.vh.stacks.implementation.StackList;
 
 public class StackFIFO extends Stack implements IStack {
 
+	private Stack temp = new Stack(new StackList());
+	// 3.1.14: Lepszym wyborem bedzie StackList ze wzgledu na wieksza wydajnosc i brak ograniczen liczby elementow.
+
 	public StackFIFO() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -13,9 +16,7 @@ public class StackFIFO extends Stack implements IStack {
 		super(stackList);
 		// TODO Auto-generated constructor stub
 	}
-
-	private Stack temp = new Stack();
-
+	
 	@Override
 	public int pop() {
 		while (!isEmpty())
@@ -27,5 +28,9 @@ public class StackFIFO extends Stack implements IStack {
 			push(temp.pop());
 
 		return ret;
+	}
+	
+	public Stack getTemp() {
+		return temp;
 	}
 }
