@@ -2,17 +2,24 @@ package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IStacksFactory;
+import edu.kis.vh.stacks.factory.StackListFactory;
 //TODO: needs to test implementation of StackLIst insted of Stack Array
 // Usunięte wcięcie w linii 13, 19-27, dodana spacja przed klamra w linii 14, usuniety enter w linii 30 
 class StacksDemo {
 
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
+		ArrayStacksFactory arrayStacksFactory = new ArrayStacksFactory();
+		StackListFactory stackListFactory = new StackListFactory();
+		testStacks(arrayStacksFactory);
+		testStacks(stackListFactory);
 		testStacks(factory);
 	}
 // F3 użyte na wywołaniu funkcji przenosi do ciała funkcji 
-	private static void testStacks(DefaultStacksFactory factory) {
+	private static void testStacks(IStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(),
 				factory.getHanoiStack() };
 
