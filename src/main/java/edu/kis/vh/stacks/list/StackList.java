@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.IStack;
 
 public class StackList implements IStack {
 // generate Delegate, generate Constructor 
-	private static final int EMPTY_STACK_VALUE = -1;
+	private static final int EMPTY_STACK_INDICATOR = -1;
 	private Node last;
 	private int i;
 
@@ -28,13 +28,13 @@ public class StackList implements IStack {
 
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return EMPTY_STACK_INDICATOR;
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return EMPTY_STACK_INDICATOR;
 		int ret = last.getValue();
 		last = last.getPrev();
 		return ret;
