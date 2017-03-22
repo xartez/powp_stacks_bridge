@@ -12,8 +12,8 @@ public class StackFIFO extends Stack implements IStack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackFIFO(StackList stackList) {
-		super(stackList);
+	public StackFIFO(IStack iStack) {
+		super(iStack);
 		// TODO Auto-generated constructor stub
 	}
 	

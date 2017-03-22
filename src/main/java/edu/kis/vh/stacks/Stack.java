@@ -32,14 +32,14 @@ public class Stack {
 	// 3.1.7 implementacja metod zostala zastapiona delegacja do interfejsu 
 
 	//private stackList stackList = new stackList();
-	private IStack iStack = new StackList();
+	private IStack iStack;
 	public Stack() {
 		this.iStack = new StackList();
 	}
 
-	public Stack(StackList stackList) {
+	public Stack(IStack iStack) {
 		super();
-		this.iStack = stackList;
+		this.iStack = iStack;
 	}
 
 	public void push(int i) {
