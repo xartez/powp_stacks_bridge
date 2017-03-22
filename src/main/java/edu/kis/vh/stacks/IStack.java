@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 public interface IStack {
 
-	public static final int EMPTY_STACK_INDICATOR = -1;
+	public static final int EMPTY_STACK_INDICATOR = 0;
 	
 	void push(int i);
 
@@ -13,5 +13,7 @@ public interface IStack {
 	int top();
 
 	int pop();
+	
+	//3.1.11 dzieki wydelegowaniu stalej dokonalem zmiany tylko w jednym pliku zamiast dwoch
 
 }
