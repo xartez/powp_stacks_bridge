@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.IStack;
 
 public class StackList implements IStack {
 // generate Delegate, generate Constructor 
-	private static final int EMPTY_STACK_INDICATOR = -1;
+
 	private Node last;
 	private int i;
 

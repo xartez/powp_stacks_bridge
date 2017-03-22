@@ -33,11 +33,9 @@ public class StackArray implements IStack {
 
 	private static final int STACK_SIZE_VALUE = 12;
 
-	private static final int EMPTY_STACK_VALUE = -1;
-
 	private int[] items = new int[STACK_SIZE_VALUE];
 
-	private int total = EMPTY_STACK_VALUE;
+	private int total = EMPTY_STACK_INDICATOR;
 	
 
 	public int getTotal() {
@@ -52,7 +50,7 @@ public class StackArray implements IStack {
 	}
 
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return total == EMPTY_STACK_INDICATOR;
 	}
 
 	public boolean isFull() {
@@ -61,13 +59,13 @@ public class StackArray implements IStack {
 
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return EMPTY_STACK_INDICATOR;
 		return items[total];
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return EMPTY_STACK_INDICATOR;
 		return items[total--];
 	}
 
