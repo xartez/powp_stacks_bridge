@@ -28,7 +28,7 @@ import edu.kis.vh.stacks.list.StackList;
  * 
  */
 public class Stack {
-	// 3.1.6 implementacja metod zostala zastapiona delegacja do interfejsu 
+	// 3.1.7 implementacja metod zostala zastapiona delegacja do interfejsu 
 
 	//private stackList stackList = new stackList();
 	private IStack iStack = new StackList();
